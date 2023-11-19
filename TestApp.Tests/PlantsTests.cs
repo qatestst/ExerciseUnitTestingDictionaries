@@ -32,7 +32,7 @@ public class PlantsTests
         
         // Act
         string result = Plants.GetFastestGrowing(plants);
-        string expected = "Plants with 5 letters:\r\n@--\\-";
+        string expected = $"Plants with 5 letters:{Environment.NewLine}@--\\-";
 
         // Assert
         Assert.That(result, Is.EqualTo(expected));
@@ -55,7 +55,7 @@ public class PlantsTests
         string result = Plants.GetFastestGrowing(input);
 
         // Assert
-        Assert.That(result, Is.EqualTo("Plants with 4 letters:\r\n*---\r\n----\r\nPlants with 5 letters:\r\n@--\\-\r\n*-\\-\\"));
+        Assert.That(result, Is.EqualTo($"Plants with 4 letters:{Environment.NewLine}*---{Environment.NewLine}----{Environment.NewLine}Plants with 5 letters:{Environment.NewLine}@--\\-{Environment.NewLine}*-\\-\\"));
     }
 
     [Test]
@@ -72,7 +72,7 @@ public class PlantsTests
 
         // Act
         string result = Plants.GetFastestGrowing(input);
-        string expected = "Plants with 4 letters:\r\nrOse\r\nliLy\r\nPlants with 5 letters:\r\naBcde\r\nFdgre";
+        string expected = $"Plants with 4 letters:{Environment.NewLine}rOse{Environment.NewLine}liLy{Environment.NewLine}Plants with 5 letters:{Environment.NewLine}aBcde{Environment.NewLine}Fdgre";
 
         // Assert
         Assert.That(result, Is.EqualTo(expected));
